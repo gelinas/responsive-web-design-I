@@ -21,27 +21,32 @@ nav {
 	width: 100%;
 	margin-bottom: 20px;
 	display: flex; 
-	flex-flow: row nowrap;
+	flex-flow: column-reverse nowrap;
 	justify-content: space-evenly;
+	align-items: center;
 }
 
 nav a {
 	color:lightslategray;
 	text-decoration: none;
+	border: 1px solid slategrey;
+	width: 100%;
+	text-align: center;
+	padding: 10px;
 }
 
 .navLinks {
 	display: flex;
-	flex-flow: row nowrap;
+	flex-flow: column nowrap;
 	justify-content: space-evenly;
 	align-items: center;
-	width: 80%;
+	width: 100%;
 }
 
 .navLogo {
-	width: 20%;
+	width: 100%;
 	text-align: center;
-	margin: 20px;
+	margin-bottom: 20px;
 }
 /* Header Styling -- INDEX */
 
@@ -53,15 +58,18 @@ nav a {
 	justify-content: space-around;
 	align-items: center;
 	text-align: center;
-	margin: 20px;
 }
 
 .indexHeader h1 {
 	font-size: 75px;
 }
 
-.headerSplash, .headerImage {
-	width: 50%;
+.headerSplash {
+	width: 100%;
+}
+
+.headerImage {
+	display: none;
 }
 
 .headerSplash {
@@ -90,12 +98,22 @@ nav a {
 	text-align: left;
 }
 
+.services-header-img {
+	width: 100%;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-evenly;
+	align-items: center;
+	text-align: left;
+}
+
 .servicesHeader h3 {
 	font-size: 25px;
 }
 
 .servicesHeader div {
-	margin: 20px;
+	width: 98%;
+	margin: 20px 1%;
 }
 
 /* Main Styling -- INDEX */
@@ -104,21 +122,22 @@ nav a {
 	border-color: slategrey;
 	border-top: 2px solid;
 	border-bottom: 2px solid;
-	margin: 20px;
+	margin: 20px 1%;
 	display: flex;
 	flex-flow: column nowrap;
 }
 
 .top-content {
 	display: flex;
-	flex-flow: row nowrap;
+	flex-flow: column nowrap;
 	justify-content: space-between;
+	align-items: center;
 	margin: 20px 0px;
 }
 
 .top-content div {
-	width: 50%;
-	margin: 0px 5px;
+	width: 98%;
+	margin: 0px 1%;
 }
 
 .middle-image {
@@ -131,14 +150,15 @@ nav a {
 
 .bottom-content {
 	display: flex;
-	flex-flow: row nowrap;
+	flex-flow: column nowrap;
 	justify-content: space-between;
+	align-items: center;
 	margin: 20px 0px;
 }
 
 .bottom-content div {
-	width: 33%;
-	margin: 0px 5px;
+	width: 98%;
+	margin: 0px 1%;
 }
 
 /* Main Styling -- Services */
@@ -147,19 +167,20 @@ nav a {
 	border-color: slategrey;
 	border-top: 2px solid;
 	border-bottom: 2px solid;
-	margin: 20px;
+	margin: 20px 1%;
 	padding: 20px 0px;
 	display: flex;
-	flex-flow: row wrap;
+	flex-flow: column nowrap;
 	justify-content: space-between;
+	align-items: center;
 }
 
 .infoBox {
 	border: 2px solid slategrey;
 	background-color: lightgrey;
 	padding: 15px;
-	margin: 10px 0px;
-	width: 49%;
+	margin: 1% 1%;
+	width: 98%;
 }
 
 .infoBox button {
@@ -194,14 +215,24 @@ nav a {
 
 /* Footer Styling -- Services */
 .servicesFooter {
-	margin: 20px;
+	width: 98%;
+	margin: 20px 1%;
 	display: flex;
-	flex-flow: row wrap;
+	flex-flow: column nowrap;
 	justify-content: space-between;
 }
 
 .servicesNotes {
-	width: 50%;
+	width: 100%;
+}
+
+.services-info-img-container {
+	width: 98%;
+	margin: 0px 1%;
+}
+
+.services-info-img {
+	max-width: 100%;
 }
 
 .servicesNotes p {
@@ -213,10 +244,101 @@ nav a {
 	margin: 20px;
 }
 
-/* media queries - TABLET */
 
-@media only screen and (max-width: 800px) {
-	/* Nav Bar */
+/* media queries MOBILE FIRST - Grow to Tablet */
+
+@media only screen and (min-width: 499px) {
+	nav a {
+		border: none;
+		width: none;
+		text-align: center;
+		padding: 0px;
+	}
+
+	.navLinks {
+		flex-flow: row nowrap;
+		width: 80%;
+	}
+
+	.top-content {
+		flex-flow: row nowrap;
+	}
+
+	.top-content div {
+		width: 48%;
+		margin: 0px 1%;
+	}
+
+	.bottom-content {
+		flex-flow: row nowrap;
+	}
+	
+	.bottom-content div {
+		width: 31%;
+		margin: 0px 1%;
+	}
+
+
+	/* media queries MOBILE FIRST SERVICES - Grow to Tablet */
+
+	.servicesMain {
+		flex-flow: row wrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.infoBox {
+		border: 2px solid slategrey;
+		background-color: lightgrey;
+		padding: 15px;
+		margin: 1% 1%;
+		width: 48%;
+	}
+
+	.servicesFooter {
+		flex-flow: row wrap;
+		justify-content: space-between;
+	}
+	
+	.servicesNotes {
+		width: 48%;
+		margin: 0px 1%;
+	}
+	
+	.services-info-img-container {
+		width: 48%;
+		margin: 0px 1%;
+	}
+}
+
+/* media queries MOBILE FIRST - Grow to Desktop */
+
+@media only screen and (min-width: 799px) {
+	nav {
+		flex-flow: row nowrap;
+	}
+	
+	.navLogo {
+		width: 20%;
+		margin: 20px;
+	}
+
+	.indexHeader {
+		margin: 0 1%;
+	}
+
+	.headerSplash {
+		width: 50%;
+	}
+
+	.headerImage {
+		display: block;
+		width: 50%;
+	}
+}
+/* media queries Desktop First - Reduce to Tablet */
+
+/* @media only screen and (max-width: 800px) {
 	nav {
 		flex-flow: column-reverse nowrap;
 		align-items: center;
@@ -237,11 +359,11 @@ nav a {
 	.headerImage {
 		display: none;
 	}
-  }
+  } */
 
-  /* media queries - MOBILE */
+  /* media queries Desktop First - Reduce to Mobile */
 
-@media only screen and (max-width: 500px) {
+/* @media only screen and (max-width: 500px) {
     .navLinks {
 		flex-flow: column nowrap;
 		align-items: center;
@@ -271,4 +393,4 @@ nav a {
 		width: 100%;
 		margin: 0px 5px;
 	}
-  }
+  } */
