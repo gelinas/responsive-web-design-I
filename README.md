@@ -1,6 +1,8 @@
+# Louis Gelinas - 12AUG19
+
 # Responsive Web Design I: Adaptive Website
 
-It's time to expand our CSS skills into multiple devices.  You will be creating an adaptive version of the "Great Idea" design. You will be working through design mock ups for desktop, tablet, and mobile devices located in the [design-files](design-files) folder. 
+It's time to expand our CSS skills into multiple devices.  You will be creating an adaptive version of the "Great Idea" design. You will be working through design mock ups for desktop, tablet, and mobile devices located in the [design-files][1] folder. 
 
 ## Task 1: Set Up The Project With Git
 
@@ -12,7 +14,7 @@ Follow these steps to set up and work on your project:
 - [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
 - [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
 - [ ] Push commits: git push origin `<firstName-lastName>`.
- 
+	 
 Follow these steps for completing your project.
 
 - [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's  Repo). **Please don't merge your own pull request**
@@ -21,14 +23,21 @@ Follow these steps for completing your project.
 
 ## Task 2: Minimum Viable Product
 
-* [ ] Review each [design file](design-files).  Notice the subtle differences between them all. 
-* [ ] Insert a `viewport` meta tag into the head of the project with these html attributes: `content="width=device-width, initial-scale=1"`
-* [ ] Introduce max-width media queries into your project at 800px and 500px  
-* [ ] Do your best to make your styles match the design files at each breakpoint 
+* [X] Review each [design file][2].  Notice the subtle differences between them all. 
+* [X] Insert a `viewport` meta tag into the head of the project with these html attributes: `content="width=device-width, initial-scale=1"`
+* [X] Introduce max-width media queries into your project at 800px and 500px  
+* [X] Do your best to make your styles match the design files at each breakpoint 
 
-## Stretch Goals: 
-* [ ] Create a tablet and mobile version of the services page from previous projects
-* [ ] Once you have completed the project with max-width media queries, start over with min-width media queries to get a feel for how a mobile first approach would be like.  I recommend making a copy of all your contents in a new folder named "mobile-first" to keep it separate
+## Stretch Goals:
+* [X] Create a tablet and mobile version of the services page from previous projects
+
+Created the services page from the mobile-first CSS, using media queries to responsively resize to the desktop design image!
+
+* [X] Once you have completed the project with max-width media queries, start over with min-width media queries to get a feel for how a mobile first approach would be like.  I recommend making a copy of all your contents in a new folder named "mobile-first" to keep it separate
+
+Made mobile-first version in sub-directory “mobile-first/“
 
 
 
+[1]:	design-files
+[2]:	design-files

@@ -1,3 +1,396 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
 
 
+/* Navigation Bar Styling */
+
+nav {
+	width: 100%;
+	margin-bottom: 20px;
+	display: flex; 
+	flex-flow: column-reverse nowrap;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+nav a {
+	color:lightslategray;
+	text-decoration: none;
+	border: 1px solid slategrey;
+	width: 100%;
+	text-align: center;
+	padding: 10px;
+}
+
+.navLinks {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 100%;
+}
+
+.navLogo {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 20px;
+}
+/* Header Styling -- INDEX */
+
+
+.indexHeader {
+	width: 100%;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	align-items: center;
+	text-align: center;
+}
+
+.indexHeader h1 {
+	font-size: 75px;
+}
+
+.headerSplash {
+	width: 100%;
+}
+
+.headerImage {
+	display: none;
+}
+
+.headerSplash {
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.indexHeader button {
+	background-color: white;
+	border-color: black;
+	color:black;
+	width: 250px;
+	height: 50px;
+	font-size: 12px;
+	margin-top: 10px;
+	padding: 0px;
+}
+
+/* Header Styling -- Services */
+.servicesHeader {
+	width: 100%;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-evenly;
+	align-items: center;
+	text-align: left;
+}
+
+.services-header-img {
+	width: 100%;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-evenly;
+	align-items: center;
+	text-align: left;
+}
+
+.servicesHeader h3 {
+	font-size: 25px;
+}
+
+.servicesHeader div {
+	width: 98%;
+	margin: 20px 1%;
+}
+
+/* Main Styling -- INDEX */
+
+.indexMain {
+	border-color: slategrey;
+	border-top: 2px solid;
+	border-bottom: 2px solid;
+	margin: 20px 1%;
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+.top-content {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+	align-items: center;
+	margin: 20px 0px;
+}
+
+.top-content div {
+	width: 98%;
+	margin: 0px 1%;
+}
+
+.middle-image {
+	text-align: center;
+}
+
+.middle-img {
+	width:100%;
+}
+
+.bottom-content {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+	align-items: center;
+	margin: 20px 0px;
+}
+
+.bottom-content div {
+	width: 98%;
+	margin: 0px 1%;
+}
+
+/* Main Styling -- Services */
+
+.servicesMain {
+	border-color: slategrey;
+	border-top: 2px solid;
+	border-bottom: 2px solid;
+	margin: 20px 1%;
+	padding: 20px 0px;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.infoBox {
+	border: 2px solid slategrey;
+	background-color: lightgrey;
+	padding: 15px;
+	margin: 1% 1%;
+	width: 98%;
+}
+
+.infoBox button {
+	background-color: white;
+	border-color: black;
+	border-radius: 3px;
+	color:black;
+	width: 35%;
+	font-size: 12px;
+	margin-top: 15px;
+	padding: 5px;
+}
+
+/* Footer Styling -- INDEX */
+
+.indexFooter {
+	margin: 20px;
+}
+
+.contact {
+	margin: 15px 0px;
+}
+.contact p {
+	line-height: 2;
+}
+
+.copyright {
+	width: 100%;
+	text-align: center;
+	margin: 50px 0px 15px 0px;
+}
+
+/* Footer Styling -- Services */
+.servicesFooter {
+	width: 98%;
+	margin: 20px 1%;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+}
+
+.servicesNotes {
+	width: 100%;
+}
+
+.services-info-img-container {
+	width: 98%;
+	margin: 0px 1%;
+}
+
+.services-info-img {
+	max-width: 100%;
+}
+
+.servicesNotes p {
+	margin: 15px 0px;
+}
+
+.servicesNotes li {
+	list-style-type: square;
+	margin: 20px;
+}
+
+
+/* media queries MOBILE FIRST - Grow to Tablet */
+
+@media only screen and (min-width: 499px) {
+	nav a {
+		border: none;
+		width: none;
+		text-align: center;
+		padding: 0px;
+	}
+
+	.navLinks {
+		flex-flow: row nowrap;
+		width: 80%;
+	}
+
+	.top-content {
+		flex-flow: row nowrap;
+	}
+
+	.top-content div {
+		width: 48%;
+		margin: 0px 1%;
+	}
+
+	.bottom-content {
+		flex-flow: row nowrap;
+	}
+	
+	.bottom-content div {
+		width: 31%;
+		margin: 0px 1%;
+	}
+
+
+	/* media queries MOBILE FIRST SERVICES - Grow to Tablet */
+
+	.servicesMain {
+		flex-flow: row wrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.infoBox {
+		border: 2px solid slategrey;
+		background-color: lightgrey;
+		padding: 15px;
+		margin: 1% 1%;
+		width: 48%;
+	}
+
+	.servicesFooter {
+		flex-flow: row wrap;
+		justify-content: space-between;
+	}
+	
+	.servicesNotes {
+		width: 48%;
+		margin: 0px 1%;
+	}
+	
+	.services-info-img-container {
+		width: 48%;
+		margin: 0px 1%;
+	}
+}
+
+/* media queries MOBILE FIRST - Grow to Desktop */
+
+@media only screen and (min-width: 799px) {
+	nav {
+		flex-flow: row nowrap;
+	}
+	
+	.navLogo {
+		width: 20%;
+		margin: 20px;
+	}
+
+	.indexHeader {
+		margin: 0 1%;
+	}
+
+	.headerSplash {
+		width: 50%;
+	}
+
+	.headerImage {
+		display: block;
+		width: 50%;
+	}
+}
+/* media queries Desktop First - Reduce to Tablet */
+
+/* @media only screen and (max-width: 800px) {
+	nav {
+		flex-flow: column-reverse nowrap;
+		align-items: center;
+	}
+
+	.navLogo {
+		width: 100%;
+	}
+
+	.indexHeader {
+		margin: 20px 0px;
+	}
+
+	.headerSplash {
+		width: 100%;
+	}
+
+	.headerImage {
+		display: none;
+	}
+  } */
+
+  /* media queries Desktop First - Reduce to Mobile */
+
+/* @media only screen and (max-width: 500px) {
+    .navLinks {
+		flex-flow: column nowrap;
+		align-items: center;
+	}
+
+	nav a {
+		border: 1px solid slategrey;
+		width: 100%;
+		text-align: center;
+		padding: 10px;
+	}
+
+	.top-content {
+		flex-flow: column nowrap;
+	}
+
+	.top-content div {
+		width: 100%;
+		margin: 0px 5px;
+	}
+
+	.bottom-content {
+		flex-flow: column nowrap;
+	}
+
+	.bottom-content div {
+		width: 100%;
+		margin: 0px 5px;
+	}
+  } */
